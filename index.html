@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="APEX Performance — Elite sports training center. Personal training, group classes, CrossFit, boxing, yoga and nutrition coaching. Train beyond limits." />
+  <title>APEX Performance — Elite Sports & Fitness Training</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <canvas id="gl-canvas"></canvas>
+  <canvas id="particle-canvas"></canvas>
+  <div class="grain-overlay"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-scroll="0">
+        <img src="images/logo.png" alt="APEX Performance Logo" class="logo-img" />
+        <span class="logo-text">APEX <span class="logo-accent">PERFORMANCE</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-scroll="1" class="nav-link">Programs</a></li>
+        <li><a href="#" data-scroll="2" class="nav-link">Results</a></li>
+        <li><a href="#" data-scroll="3" class="nav-link">Journey</a></li>
+        <li><a href="#" data-scroll="4" class="nav-link">About</a></li>
+        <li><a href="#" data-scroll="5" class="nav-link nav-cta">Join Now</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+  <div class="nav-drawer" id="nav-drawer" hidden>
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <ul class="drawer-links" id="drawer-links">
+      <li><a href="#" data-scroll="1" class="drawer-link">Programs</a></li>
+      <li><a href="#" data-scroll="2" class="drawer-link">Results</a></li>
+      <li><a href="#" data-scroll="3" class="drawer-link">Journey</a></li>
+      <li><a href="#" data-scroll="4" class="drawer-link">About</a></li>
+      <li><a href="#" data-scroll="5" class="drawer-link">Join Now</a></li>
+    </ul>
+    <div class="drawer-contacts">
+      <a href="mailto:info@apexperformance.com" class="drawer-social">Email Us</a>
+      <a href="https://instagram.com" target="_blank" class="drawer-social">Instagram</a>
+    </div>
+  </div>
+
+  <div id="ui-layer">
+    <div class="stage">
+
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <img src="images/logo.png" alt="APEX Performance" class="hero-logo reveal-3d">
+          <div class="hero-badge reveal-3d">Elite Training Center</div>
+          <h1 class="hero-title reveal-3d"><span class="gradient-text">APEX Performance</span></h1>
+          <p class="hero-subtitle reveal-3d">Train beyond your limits.<br>Where champions are forged.</p>
+          <div class="hero-cta-group reveal-3d">
+            <a href="#" data-scroll="1" class="btn-primary">View Programs</a>
+            <a href="#" data-scroll="5" class="btn-outline">Start Free Trial</a>
+          </div>
+          <div class="hero-scroll-hint"><div class="scroll-line"></div><span>scroll</span></div>
+        </div>
+      </section>
+
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Our Programs</div>
+          <h2 class="section-title reveal-3d">World-Class<br><span class="gradient-text">Training Programs</span></h2>
+          <p class="section-desc reveal-3d">From personal coaching to group sessions — find your perfect fit</p>
+          <div class="services-grid reveal-3d">
+            <div class="service-card">
+              <div class="service-icon">💪</div>
+              <h3>Personal Training</h3>
+              <p>One-on-one sessions with certified trainers. Customized workout plans designed for your specific goals and fitness level.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">👥</div>
+              <h3>Group Classes</h3>
+              <p>High-energy group sessions including HIIT, spinning, and circuit training. Motivation through community and shared goals.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🏋️</div>
+              <h3>CrossFit</h3>
+              <p>Functional fitness at its finest. Build strength, endurance, and agility through varied, high-intensity workouts.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🧘</div>
+              <h3>Yoga & Pilates</h3>
+              <p>Balance body and mind. From power yoga to reformer pilates — flexibility, core strength, and inner peace.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🥊</div>
+              <h3>Boxing & MMA</h3>
+              <p>Learn from professional fighters. Cardio boxing, technique drills, and competitive training for all levels.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🥗</div>
+              <h3>Nutrition Coaching</h3>
+              <p>Fuel your performance. Personalized meal plans, supplement guidance, and metabolic assessments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="2" id="collections">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Success Stories</div>
+          <h2 class="section-title reveal-3d">Real<br><span class="gradient-text">Transformations</span></h2>
+          <p class="section-desc reveal-3d">Our members achieve extraordinary results. Numbers don't lie.</p>
+          <div class="collections-grid reveal-3d">
+            <div class="collection-card card-large">
+              <div class="collection-overlay">
+                <span class="collection-label">Competition Ready</span>
+                <h3>Elite Athletes</h3>
+                <p>From amateur to competitor. Our training methodology has produced 50+ nationally ranked athletes across multiple disciplines.</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay">
+                <span class="collection-label">Lives Changed</span>
+                <h3>10,000+</h3>
+                <p>Lives transformed through dedicated training and expert coaching</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay">
+                <span class="collection-label">Satisfaction Rate</span>
+                <h3>96%</h3>
+                <p>Member satisfaction rate — because results speak louder than promises</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="3" id="production">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Your Journey</div>
+          <h2 class="section-title reveal-3d">The<br><span class="gradient-text">Fitness Journey</span></h2>
+          <p class="section-desc reveal-3d">A structured path from your first visit to peak performance</p>
+          <div class="production-layout reveal-3d">
+            <div class="production-stats">
+              <div class="stat-card"><span class="stat-number">12+</span><span class="stat-label">years of excellence</span></div>
+              <div class="stat-card"><span class="stat-number">50+</span><span class="stat-label">certified trainers</span></div>
+              <div class="stat-card"><span class="stat-number">10K+</span><span class="stat-label">members trained</span></div>
+              <div class="stat-card"><span class="stat-number">24/7</span><span class="stat-label">facility access</span></div>
+              <div class="production-steps">
+                <div class="prod-step"><span class="step-num">01</span><span class="step-text">Initial fitness assessment & goal setting</span></div>
+                <div class="prod-step"><span class="step-num">02</span><span class="step-text">Personalized program design</span></div>
+                <div class="prod-step"><span class="step-num">03</span><span class="step-text">Progressive training with expert guidance</span></div>
+                <div class="prod-step"><span class="step-num">04</span><span class="step-text">Regular performance tracking & adjustments</span></div>
+                <div class="prod-step"><span class="step-num">05</span><span class="step-text">Achievement celebration & new goal setting</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="4" id="about">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">About Us</div>
+          <h2 class="section-title reveal-3d">Why Choose<br><span class="gradient-text">APEX Performance</span></h2>
+          <p class="section-desc reveal-3d">More than a gym — a complete performance ecosystem</p>
+          <div class="about-grid reveal-3d">
+            <div class="about-card">
+              <div class="about-icon">🏆</div>
+              <h3>Championship Mindset</h3>
+              <p>Training philosophy rooted in competitive excellence. Every workout is a step toward your personal best.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🔬</div>
+              <h3>Science-Based Training</h3>
+              <p>Programs designed using the latest exercise science research. Optimal results through evidence-based methodology.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🤝</div>
+              <h3>Community & Support</h3>
+              <p>Join a tribe of dedicated athletes. Group motivation, friendly competition, and lifelong fitness connections.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">⚡</div>
+              <h3>State-of-the-Art Facility</h3>
+              <p>Premium equipment, recovery zones, saunas, and cryotherapy. Everything you need under one roof.</p>
+            </div>
+          </div>
+          <div class="about-cta reveal-3d">
+            <a href="#" data-scroll="5" class="btn-primary">Join Now</a>
+            <a href="https://instagram.com" target="_blank" class="btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Join The Movement</div>
+          <h2 class="section-title reveal-3d">Start Your<br><span class="gradient-text">Transformation</span></h2>
+          <p class="section-desc reveal-3d">Take the first step — your best self is waiting</p>
+          <div class="contact-layout reveal-3d" style="display:flex;justify-content:center;">
+            <div class="contact-info-card">
+              <h3>Get In Touch</h3>
+              <div class="contact-item"><span class="contact-icon">📧</span><div><strong>Email</strong><a href="mailto:info@apexperformance.com">info@apexperformance.com</a></div></div>
+              <div class="contact-item"><span class="contact-icon">📞</span><div><strong>Phone</strong><a href="tel:+15552345678">+1 (555) 234-5678</a></div></div>
+              <div class="contact-item"><span class="contact-icon">📍</span><div><strong>Address</strong><span>742 Fitness Blvd, Los Angeles, CA 90001</span></div></div>
+              <div class="contact-item"><span class="contact-icon">⏰</span><div><strong>Hours</strong><span>Open 24/7 — Staffed: 6:00 AM – 10:00 PM</span></div></div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-inner">
+            <span class="footer-logo">APEX PERFORMANCE</span>
+            <span class="footer-copy">© 2025 APEX Performance. Train Beyond Limits.</span>
+            <div class="footer-socials"><a href="https://instagram.com" target="_blank">IG</a><a href="https://twitter.com" target="_blank">TW</a></div>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
